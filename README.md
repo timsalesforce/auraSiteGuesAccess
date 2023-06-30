@@ -1,18 +1,13 @@
-# Salesforce DX Project: Next Steps
+# W-13682535 - Gov Cloud Premier+ - Washington State Liquor Control Board - Custom LWC inside the OmniScript is not rendering in production portal
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Hopefully this bundle will allow you to repro the OmniScript issue with LWCs and scoped namespaces.  It contains all the necessary components and licenses, but your mileage may vary when it comes to deployment.
 
-## How Do You Plan to Deploy Your Changes?
+Steps:
+1. Clone this repo
+2. Create a scratch org
+3. Deploy this code (hopefully it will work, may have to use --forceoverwrite)
+4. Go to All Sites
+5. Copy the site URL
+6. In an incognito window, load the URL
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Hopefully you will see an empty page, and if you enabled break-on-error, you will see the scoped namespace error.  Also, you will notice that the page is not running with LWS.
